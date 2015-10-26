@@ -130,14 +130,18 @@ for(i in 1:nrow(test.X)){
     if(train.Y[jmin1]==train.Y[jmin2]){
         predicted.Y[i] = train.Y[jmin1]
     }
-    if(train.Y[jmin1]==train.Y[jmin3]){
-        predicted.Y[i] = train.Y[jmin1]
-    }
-    if(train.Y[jmin2]==train.Y[jmin3]){
-        predicted.Y[i] = train.Y[jmin2]
-    }
     else{
-        predicted.Y[i] = -1
+        if(train.Y[jmin1]==train.Y[jmin3]){
+            predicted.Y[i] = train.Y[jmin1]
+        }
+        else{
+            if(train.Y[jmin2]==train.Y[jmin3]){
+                predicted.Y[i] = train.Y[jmin2]
+            }
+            else{
+                predicted.Y[i] = -1
+            }
+        }
     }
 }
 
@@ -290,14 +294,18 @@ for(i in 1:nrow(test.X)){
     if(train.Y[jmin1]==train.Y[jmin2]){
         predicted.Y[i] = train.Y[jmin1]
     }
-    if(train.Y[jmin1]==train.Y[jmin3]){
-        predicted.Y[i] = train.Y[jmin1]
-    }
-    if(train.Y[jmin2]==train.Y[jmin3]){
-        predicted.Y[i] = train.Y[jmin2]
-    }
     else{
-        predicted.Y[i] = -1
+        if(train.Y[jmin1]==train.Y[jmin3]){
+            predicted.Y[i] = train.Y[jmin1]
+        }
+        else{
+            if(train.Y[jmin2]==train.Y[jmin3]){
+                predicted.Y[i] = train.Y[jmin2]
+            }
+            else{
+                predicted.Y[i] = -1
+            }
+        }
     }
 }
 
