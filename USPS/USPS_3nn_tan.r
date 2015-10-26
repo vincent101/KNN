@@ -1,11 +1,11 @@
-source("./tangent.R")
-USPS <- read.table("USPS.txt")
-train <- USPS[1:7291,]
-train.X <- USPS[1:7291,-257]
-train.Y <- USPS[1:7291,257]
-test <- USPS[7292:9297,]
-test.X <- USPS[7292:9297,-257]
-test.Y <- USPS[7292:9297,257]
+source("tangent.R")
+USPS <- read.table("USPSsubset.txt")
+train <- USPS[1:350,]
+train.X <- USPS[1:350,-257]
+train.Y <- USPS[1:350,257]
+test <- USPS[351:465,]
+test.X <- USPS[351:465,-257]
+test.Y <- USPS[351:465,257]
 predicted.Y <- c()
 #print(test.Y)
 #print(predicted.Y)
@@ -18,7 +18,7 @@ for(i in 1:nrow(test.X)){
     jmin2 = 0
     jmin3 = 0
     for(j in 1:nrow(train.X)){
-        d = distance(train.X[j,], test.X[i,])
+        d = dist_tan(train.X[j,], test.X[i,])
         if (d < min1){
             min3 = min2
             jmin3 = jmin2
@@ -28,7 +28,18 @@ for(i in 1:nrow(test.X)){
             jmin1 = j
         }
     }
-        predicted.Y[i] = (train.Y[jmin1]+train.Y[jmin2]+train.Y[jmin3])/3
+    if(train.Y[jmin1]==train.Y[jmin2]){
+        predicted.Y[i] = train.Y[jmin1]
+    }
+    if(train.Y[jmin1]==train.Y[jmin3]){
+        predicted.Y[i] = train.Y[jmin1]
+    }
+    if(train.Y[jmin2]==train.Y[jmin3]){
+        predicted.Y[i] = train.Y[jmin2]
+    }
+    else{
+        predicted.Y[i] = -1
+    }
 }
 
 #t = table(predicted.Y, test.Y)

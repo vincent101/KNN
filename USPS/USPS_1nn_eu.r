@@ -1,4 +1,4 @@
-source("../lib/s_knn.r")
+source("tangent.R")
 USPS <- read.table("USPSsubset.txt")
 train <- USPS[1:350,]
 train.X <- USPS[1:350,-257]
