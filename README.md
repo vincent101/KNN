@@ -1,4 +1,4 @@
-# K-Nearest Neighbours
+# K-Nearest Neighbours in R
 * Using Euclidean with K=1 and K=3, calculate the percentage of correct perdictions on iris and ionosphere data set.
 * Using Euclidean metric and Tangent metric with K=1,2,3, calculate the percentage on USPS data set.
 
