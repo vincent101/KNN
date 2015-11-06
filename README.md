@@ -1,0 +1,8 @@
+# K-Nearest Neighbours
+* Using Euclidean with K=1 and K=3, calculate the percentage of correct perdictions on iris and ionosphere data set.
+* Using Euclidean metric and Tangent metric with K=1,2,3, calculate the percentage on USPS data set.
+
+* iris.txt is perhaps one of the best known data sets to be found in the pattern recognition literature. Each observation has 4 attributes describ- ing sepal length, sepal width, petal length, and petal width of an iris plant. The last number in the line describes the label, +1 standing for Iris Versicolour and 1 standing for Iris Setosa. Use the first 70 lines as the training set and the last 30 lines as the test set. 
+* ionosphere.txt contains data collected by a radar system in Goose Bay, Labrador. This system consists of a co-phased array of 16 high-frequency antennas with a total transmitted power on the order of 6.4 kilowatts. The last number in the line describes the classification. “Good” (+1) radar returns are those showing evidence of some type of structure in the ionosphere. “Bad” (1) returns are those that do not. Use the first 200 lines as the training set and the rest as the test set. 
+* USPS.txt contains normalized handwritten digits, automatically scanned from envelopes by the US Postal Service. The original scanned digits are binary and of di↵erent sizes and orientations; the images have been deslanted and size normalized, resulting in 16 ⇥ 16 grayscale images. The data are in two files, and each line consists of the 256 grayscale values for the pixels followed by the true label (0–9). The original data set consisted of two parts, 7291 training observations and 2007 test observations, but they have been merged into one file, USPS.txt. 
+
